@@ -87,20 +87,25 @@ export default function MathSolver() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-6">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-6">
       <div className="max-w-4xl mx-auto">
         <div className="bg-white rounded-2xl shadow-xl p-8">
           <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-gray-800 mb-2">Numina Solve</h1>
-            {/* <img src="images/Numina logo.png" alt="Math Solver Logo" width="60"></img> */}
-            <p className="text-gray-600">Upload an image of any math problem and get step-by-step solutions</p>
+            <img 
+              src="https://i.postimg.cc/hGZSC4vR/numina-logo.png" 
+              alt="Numina Solve Logo" 
+              className="w-32 h-32 mx-auto mb-4"
+            />
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-2">NUMINA SOLVE</h1>
+            <p className="text-cyan-300 font-semibold text-lg mb-2">Unlock the Universe of Numbers</p>
+            <p className="text-gray-300">Upload an image of any math problem and get step-by-step solutions</p>
           </div>
 
           {!imagePreview ? (
             <div
               onDrop={handleDrop}
               onDragOver={handleDragOver}
-              className="border-4 border-dashed border-indigo-300 rounded-xl p-12 text-center hover:border-indigo-400 transition-colors cursor-pointer bg-indigo-50"
+              className="border-4 border-dashed border-cyan-400 rounded-xl p-12 text-center hover:border-purple-400 transition-colors cursor-pointer bg-slate-800/50"
             >
               <input
                 type="file"
@@ -110,19 +115,19 @@ export default function MathSolver() {
                 id="file-upload"
               />
               <label htmlFor="file-upload" className="cursor-pointer">
-                <Upload className="w-16 h-16 mx-auto text-indigo-400 mb-4" />
-                <p className="text-lg font-semibold text-gray-700 mb-2">
+                <Upload className="w-16 h-16 mx-auto text-cyan-400 mb-4" />
+                <p className="text-lg font-semibold text-gray-200 mb-2">
                   Drop your image here or click to upload
                 </p>
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-gray-400">
                   Supports JPG, PNG and other image formats
                 </p>
               </label>
             </div>
           ) : (
             <div className="space-y-6">
-              <div className="bg-gray-50 rounded-xl p-4">
-                <h3 className="font-semibold text-gray-700 mb-3">Uploaded Image:</h3>
+              <div className="bg-slate-800/50 rounded-xl p-4 border border-cyan-400/30">
+                <h3 className="font-semibold text-gray-200 mb-3">Uploaded Image:</h3>
                 <img
                   src={imagePreview}
                   alt="Math problem"
@@ -135,7 +140,7 @@ export default function MathSolver() {
                 <button
                   onClick={solveProblem}
                   disabled={loading}
-                  className="flex-1 bg-indigo-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-indigo-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                   {loading ? (
                     <>
@@ -152,7 +157,7 @@ export default function MathSolver() {
                 <button
                   onClick={reset}
                   disabled={loading}
-                  className="bg-gray-200 text-gray-700 py-3 px-6 rounded-lg font-semibold hover:bg-gray-300 transition-colors disabled:bg-gray-100 disabled:cursor-not-allowed"
+                  className="bg-slate-700 text-gray-200 py-3 px-6 rounded-lg font-semibold hover:bg-slate-600 transition-colors disabled:bg-gray-700 disabled:cursor-not-allowed"
                 >
                   Upload New
                 </button>
@@ -168,13 +173,13 @@ export default function MathSolver() {
           )}
 
           {result && (
-            <div className="mt-6 bg-green-50 border border-green-200 rounded-lg p-6">
+            <div className="mt-6 bg-green-900/30 border border-green-500/50 rounded-lg p-6">
               <div className="flex items-center gap-2 mb-4">
-                <CheckCircle className="w-6 h-6 text-green-600" />
-                <h3 className="text-xl font-bold text-green-800">Solution:</h3>
+                <CheckCircle className="w-6 h-6 text-green-400" />
+                <h3 className="text-xl font-bold text-green-300">Solution:</h3>
               </div>
               <div className="prose prose-sm max-w-none">
-                <pre className="whitespace-pre-wrap text-gray-800 font-sans bg-white p-4 rounded-lg shadow-sm">
+                <pre className="whitespace-pre-wrap text-gray-200 font-sans bg-slate-800/50 p-4 rounded-lg shadow-sm border border-cyan-400/30">
                   {result}
                 </pre>
               </div>
@@ -182,7 +187,7 @@ export default function MathSolver() {
           )}
         </div>
 
-        <div className="mt-6 text-center text-sm text-gray-600">
+        <div className="mt-6 text-center text-sm text-gray-400">
           <p>Supports arithmetic, algebra, geometry, calculus, and word problems</p>
         </div>
       </div>
