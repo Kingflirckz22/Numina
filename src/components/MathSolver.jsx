@@ -92,13 +92,14 @@ export default function MathSolver() {
         <div className="bg-white rounded-2xl shadow-xl p-8">
           <div className="text-center mb-8">
             <img 
-              src="https://i.postimg.cc/hGZSC4vR/numina-logo.png" 
+              
+              src="images/numina-logo.png" 
               alt="Numina Solve Logo" 
               className="w-32 h-32 mx-auto mb-4"
             />
             <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-2">NUMINA SOLVE</h1>
             <p className="text-cyan-300 font-semibold text-lg mb-2">Unlock the Universe of Numbers</p>
-            <p className="text-gray-300">Upload an image of any math problem and get step-by-step solutions</p>
+            <p className="text-black-300">Upload an image of any math problem and get step-by-step solutions</p>
           </div>
 
           {!imagePreview ? (
@@ -119,7 +120,7 @@ export default function MathSolver() {
                 <p className="text-lg font-semibold text-gray-200 mb-2">
                   Drop your image here or click to upload
                 </p>
-                <p className="text-sm text-gray-400">
+                <p className="text-sm text-black-400">
                   Supports JPG, PNG and other image formats
                 </p>
               </label>
@@ -191,6 +192,7 @@ export default function MathSolver() {
           <p>Supports arithmetic, algebra, geometry, calculus, and word problems</p>
         </div>
       </div>
+      <footer className="mt-6 text-center text-sm text-gray-400">© 2026 Numina solve. All rights reserved</footer>
     </div>
   );
 }
