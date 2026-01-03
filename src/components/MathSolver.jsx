@@ -92,7 +92,8 @@ export default function MathSolver() {
         <div className="bg-white rounded-2xl shadow-xl p-8">
           <div className="text-center mb-8">
             <img 
-              src="https://i.postimg.cc/hGZSC4vR/numina-logo.png" 
+              
+              src="images/numina-logo.png" 
               alt="Numina Solve Logo" 
               className="w-32 h-32 mx-auto mb-4"
             />
